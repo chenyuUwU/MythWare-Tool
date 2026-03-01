@@ -135,7 +135,7 @@ void re_StudentMainPath()
 	gets(path);
 	fputs(path, re_ini);
 	fseek(re_ini, 24, SEEK_SET);
-	fgets(path, 200, re_ini);
+	fgets(path, sizeof(path), re_ini);
 	system("cls");
 	printf("\033[33m是否要将%s设置为学生端主程序的路径 (y/n)?\033[0m\n", path);
 	char YRN = '0';
@@ -162,4 +162,5 @@ void re_StudentMainPath()
 	}
 	system("cls");
 	MENU();
+
 }
